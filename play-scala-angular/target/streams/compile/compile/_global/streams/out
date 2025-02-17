@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0m/home/cmorales/Development/MFHW/scala-angular/conf/routes:7:1: Cannot use a method returning play.api.mvc.Result as a Handler for requests[0m
+[0m[[0m[31merror[0m] [0m[0mGET     /                           controllers.HomeController.serveRoot()[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

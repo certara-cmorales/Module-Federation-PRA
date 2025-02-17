@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/cmorales/Development/Module-Federation-PRA/play-scala-react/conf/logback.xml,/home/cmorales/Development/Module-Federation-PRA/play-scala-react/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/cmorales/Development/Module-Federation-PRA/play-scala-react/conf/routes,/home/cmorales/Development/Module-Federation-PRA/play-scala-react/target/scala-2.13/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/cmorales/Development/Module-Federation-PRA/play-scala-react/conf/messages,/home/cmorales/Development/Module-Federation-PRA/play-scala-react/target/scala-2.13/classes/messages)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/cmorales/Development/Module-Federation-PRA/play-scala-react/conf/application.conf,/home/cmorales/Development/Module-Federation-PRA/play-scala-react/target/scala-2.13/classes/application.conf)[0m
