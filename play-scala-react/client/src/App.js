@@ -1,27 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import AngularRemoteApp from "./modules/AngularRemoteApp";
+import SPMenu from "./components/SPMenu";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-        <AngularRemoteApp></AngularRemoteApp>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h4>Host</h4>
+                <SPMenu></SPMenu>
+            </header>
+            <AngularRemoteApp></AngularRemoteApp>
+        </div>
+    );
 }
 
 export default App;
