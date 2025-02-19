@@ -23,3 +23,8 @@ At this point accessing to http://localhost:9001/ should display the angular app
 2. Execute `cd ..` to go back to **play-scala-react** and run `sbt run 9000`
 
 At this point accessing to http://localhost:9000/ should display the Angular application within the React application.
+
+## Communication between Application
+
+### Browser events
+The comunication can be achieved using `window.dispatchEvent()` and `window.addListener()`.
