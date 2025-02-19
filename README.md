@@ -27,4 +27,4 @@ At this point accessing to http://localhost:9000/ should display the Angular app
 ## Communication between Application
 
 ### Browser events
-The comunication can be achieved using `window.dispatchEvent()` and `window.addListener()`.
+The comunication can be achieved using `window.dispatchEvent()` and `window.addEventListener()`.
