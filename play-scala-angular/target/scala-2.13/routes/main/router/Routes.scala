@@ -38,9 +38,9 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix, """controllers.HomeController.serveAngular(file:String = "index.html")"""),
+    ("""GET""", this.prefix, """controllers.HomeController.serveClient(file:String = "index.html")"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/client/dist", file:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """""" + "$" + """file<.+>""", """controllers.HomeController.serveAngular(file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """""" + "$" + """file<.+>""", """controllers.HomeController.serveClient(file:String)"""),
     Nil
   ).foldLeft(Seq.empty[(String, String, String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String, String, String)]
@@ -49,15 +49,15 @@ class Routes(
 
 
   // @LINE:7
-  private lazy val controllers_HomeController_serveAngular0_route = Route("GET",
+  private lazy val controllers_HomeController_serveClient0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix)))
   )
-  private lazy val controllers_HomeController_serveAngular0_invoker = createInvoker(
-    HomeController_0.serveAngular(fakeValue[String]),
+  private lazy val controllers_HomeController_serveClient0_invoker = createInvoker(
+    HomeController_0.serveClient(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "serveAngular",
+      "serveClient",
       Seq(classOf[String]),
       "GET",
       this.prefix + """""",
@@ -85,15 +85,15 @@ class Routes(
   )
 
   // @LINE:13
-  private lazy val controllers_HomeController_serveAngular2_route = Route("GET",
+  private lazy val controllers_HomeController_serveClient2_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), DynamicPart("file", """.+""", encodeable=false)))
   )
-  private lazy val controllers_HomeController_serveAngular2_invoker = createInvoker(
-    HomeController_0.serveAngular(fakeValue[String]),
+  private lazy val controllers_HomeController_serveClient2_invoker = createInvoker(
+    HomeController_0.serveClient(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "serveAngular",
+      "serveClient",
       Seq(classOf[String]),
       "GET",
       this.prefix + """""" + "$" + """file<.+>""",
@@ -106,9 +106,9 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:7
-    case controllers_HomeController_serveAngular0_route(params@_) =>
+    case controllers_HomeController_serveClient0_route(params@_) =>
       call(Param[String]("file", Right("index.html"))) { (file) =>
-        controllers_HomeController_serveAngular0_invoker.call(HomeController_0.serveAngular(file))
+        controllers_HomeController_serveClient0_invoker.call(HomeController_0.serveClient(file))
       }
   
     // @LINE:10
@@ -118,9 +118,9 @@ class Routes(
       }
   
     // @LINE:13
-    case controllers_HomeController_serveAngular2_route(params@_) =>
+    case controllers_HomeController_serveClient2_route(params@_) =>
       call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_HomeController_serveAngular2_invoker.call(HomeController_0.serveAngular(file))
+        controllers_HomeController_serveClient2_invoker.call(HomeController_0.serveClient(file))
       }
   }
 }

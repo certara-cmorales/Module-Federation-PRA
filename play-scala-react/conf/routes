@@ -4,10 +4,10 @@
 # ~~~~
 
 # Serve React's index.html for the root URL
-GET     /                           controllers.HomeController.serveReact(file = "index.html")
+GET     /                           controllers.HomeController.serveClient(file = "index.html")
 
 # Serve static assets (JS, CSS, images)
 GET     /assets/*file               controllers.Assets.at(path="/client/build", file)
 
 # Catch-all route to serve React index.html for client-side routing
-GET     /*file                      controllers.HomeController.serveReact(file)
+GET     /*file                      controllers.HomeController.serveClient(file)

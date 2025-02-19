@@ -4,13 +4,13 @@
 # ~~~~
 
 # Serve Angular's index.html for the root URL
-GET     /                           controllers.HomeController.serveAngular(file = "index.html")
+GET     /                           controllers.HomeController.serveClient(file = "index.html")
 
 # Serve static assets (JS, CSS, images)
 GET     /assets/*file               controllers.Assets.at(path="/client/dist", file)
 
 # Catch-all route to serve Angular index.html for client-side routing
-GET     /*file                      controllers.HomeController.serveAngular(file)
+GET     /*file                      controllers.HomeController.serveClient(file)
 
 
 

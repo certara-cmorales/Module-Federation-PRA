@@ -20,8 +20,8 @@ import { ActionsComponent } from './components/actions/actions.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const element = createCustomElement(AppComponent, { injector });
-    customElements.define('angular-app-component', element);
-  }
+  // constructor(private injector: Injector) {
+  //   const element = createCustomElement(AppComponent, { injector });
+  //   customElements.define('angular-app-component', element);
+  // }
 }

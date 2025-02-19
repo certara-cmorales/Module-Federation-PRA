@@ -19,7 +19,7 @@ class HomeController @Inject()(cc: ControllerComponents, env: Environment)(impli
   /**
    * Serves static files, falling back to index.html for React routes
    */
-  def serveReact(file: String) = Action {
+  def serveClient(file: String) = Action {
     val requestedFile = env.getFile(this.clientPath().concat(file));
     if (requestedFile.exists() && requestedFile.isFile) {
       Ok.sendFile(requestedFile);

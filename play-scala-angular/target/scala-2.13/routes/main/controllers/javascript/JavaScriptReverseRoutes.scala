@@ -18,8 +18,8 @@ package controllers.javascript {
 
   
     // @LINE:7
-    def serveAngular: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.serveAngular",
+    def serveClient: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.serveClient",
       """
         function(file0) {
         

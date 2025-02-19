@@ -17,7 +17,7 @@ package controllers {
 
   
     // @LINE:7
-    def serveAngular(file:String): Call = {
+    def serveClient(file:String): Call = {
     
       (file: @unchecked) match {
       
